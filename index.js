@@ -18,7 +18,7 @@ function nowServing(line) {
 }
 
 function currentLine(line) {
-  var holder = "The line is currently: ";
+  var holder = [];
   let j = 0;
   
   if(line.length !== 0) {
