@@ -20,18 +20,8 @@ function nowServing(line) {
 function currentLine(line) {
   var holder = [];
   let j = 0;
-  
   if(line.length !== 0) {
     
-    while(j < line.length) {
-      holder = holder + (j+1) + ". " + line[j];
-      
-      if(line[j+1]){
-        holder = holder + ", "
-      }
-      
-      j++;
-    }
     return holder;
   } else {
     return "The line is currently empty.";
