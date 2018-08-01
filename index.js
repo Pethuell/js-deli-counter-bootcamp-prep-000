@@ -22,9 +22,9 @@ function currentLine(line) {
   let j = 0;
   if(line.length !== 0) {
     for(var i = 1; i <= line.length; i++) {
-      holder.push("")
+      holder.push(` ${i}. ${line[i]}`)
     }
-    return holder;
+    return "The line is Currently: " + holder;
   } else {
     return "The line is currently empty.";
   }
