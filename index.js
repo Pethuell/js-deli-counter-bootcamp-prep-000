@@ -24,7 +24,7 @@ function currentLine(line) {
     for(var i = 1; i <= line.length; i++) {
       holder.push(` ${i}. ${line[i-1]}`)
     }
-    return "The line is Currently: " + holder;
+    return "The line is currently:" + holder;
   } else {
     return "The line is currently empty.";
   }
