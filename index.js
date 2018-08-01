@@ -21,7 +21,9 @@ function currentLine(line) {
   var holder = [];
   let j = 0;
   if(line.length !== 0) {
-    
+    for(var i = 1; i <= line.length; i++) {
+      holder.push("")
+    }
     return holder;
   } else {
     return "The line is currently empty.";
