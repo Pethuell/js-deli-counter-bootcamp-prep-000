@@ -1,15 +1,15 @@
-function takeANumber(line, name) {
-  var welcomeMessage = "Welcome, " + name + ". You are number "+ (line.length + 1) + " in line.";
-  line.push(name);
-  return welcomeMessage;
+function takeANumber(line, newPerson) {
+  
+  line.push(newPerson);
+  
+  return `Welcome, ${newPerson}. You are number ${line.length} in line.`
 }
 
 
 function nowServing(line) {
   if(line.length !== 0) {
-    var temp = line[0]
-    line.shift();
-    return "Currently serving " + temp + ".";
+    var nextUp = line.shift();
+    return `Currently serving ${nextUp}.`;
   } else {
     return "There is nobody waiting to be served!";
   }
@@ -18,12 +18,16 @@ function nowServing(line) {
 function currentLine(line) {
   var holder = "The line is currently: ";
   let j = 0;
+  
   if(line.length !== 0) {
+    
     while(j < line.length) {
       holder = holder + (j+1) + ". " + line[j];
+      
       if(line[j+1]){
         holder = holder + ", "
       }
+      
       j++;
     }
     return holder;
