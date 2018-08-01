@@ -8,9 +8,11 @@ function takeANumber(line, newPerson) {
 
 function nowServing(line) {
   if(line.length !== 0) {
-    var nextUp = line.shift();
-    return `Currently serving ${nextUp}.`;
+    
+    return `Currently serving ${line.shift()}.`;
+  
   } else {
+    
     return "There is nobody waiting to be served!";
   }
 }
