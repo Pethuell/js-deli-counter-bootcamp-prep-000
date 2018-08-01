@@ -22,7 +22,7 @@ function currentLine(line) {
   let j = 0;
   if(line.length !== 0) {
     for(var i = 1; i <= line.length; i++) {
-      holder.push(` ${i}. ${line[i]}`)
+      holder.push(` ${i}. ${line[i-1]}`)
     }
     return "The line is Currently: " + holder;
   } else {
